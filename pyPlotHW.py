@@ -33,6 +33,8 @@ class StartPlots:
         legend.get_frame().set_linewidth(0.0)
         legend.get_frame().set_facecolor('none')
 
+        return legend
+
     def save_plot(self, title, type, figpath):
         # save fig in specified type.
         # 'tiff', 'svg', etc
@@ -71,6 +73,8 @@ if __name__ == "__main__":
     y = np.sin(x)
 
     Fig1.ax.plot(x,y)
+    leg = Fig1.legend(['sin'])
+
     plt.show()
 
     savePath = "C:\\Users\\hongl\\Desktop\\tesetfig"
